@@ -1,0 +1,26 @@
+.checkbox-container {
+  font-size: 15px;
+  line-height: 23px;
+  color: #504242;
+  display: flex;
+  align-items: center;
+
+  input[type="checkbox"] {
+    //width: 20px;
+    //height: 20px;
+    //border: 2px solid white; /* Рамка для некликнутого чекбокса */
+    //border-radius: 4px; /* Закругленные углы (опционально) */
+    //background-color: green; /* Фон некликнутого чекбокса */
+    //cursor: pointer;
+    //margin-right: 8px;
+  }
+
+  a {
+    color: #C9B1B1;
+    font-size: 15px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
