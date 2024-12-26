@@ -1,0 +1,22 @@
+.email-wrapper {
+  position: relative;
+}
+
+.email-btn {
+  position: absolute;
+  right: 65px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  color: #988080;
+  background: #453535;
+  font-size: 13px;
+  line-height: 16px;
+  padding: 5px 13px;
+  font-family: 'Lato', sans-serif;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: progress;
+  }
+}

@@ -8,6 +8,7 @@ import styles from './page.module.scss'
 import Link from "next/link";
 import RegisterBtn from "@/app/components/registerBtn/registerBtn";
 import RegisterCheckbox from "@/app/components/registerCheckbox/registerCheckbox";
+import EmailInput from "@/app/components/emailInput/emailInput";
 
 
 export default function RegisterPage() {
@@ -38,11 +39,7 @@ export default function RegisterPage() {
                         inputType="text"
                         hint="Visible nickname for your profile"
                         icon={<ProfileIcon/>}/>
-                    {/* TODO Custom email input */}
-                    <CommonInput
-                        label="Email"
-                        inputType="email"
-                        icon={<EmailIcon/>}/>
+                    <EmailInput />
                     <CommonInput
                         label="Verification Code"
                         inputType="text"
