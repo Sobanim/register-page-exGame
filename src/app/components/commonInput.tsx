@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './input.module.scss';
+import styles from './commonInput.module.scss';
 
 type InputProps = {
     label: string,
@@ -11,8 +11,17 @@ type InputProps = {
 const CommonInput = ({ label, hint, inputType, icon} : InputProps) => {
     return (
         <div className={styles['input-container']}>
-            <label>{label}</label>
-            <input type={inputType} placeholder={hint} />
+            <div className={styles['input-wrapper']}>
+                <label htmlFor={label}>{label}</label>
+                <input type={inputType} name={label} />
+            </div>
+            <div className={styles['icon-wrapper']}>
+                {icon}
+            </div>
+
+            <div>
+                {hint}
+            </div>
         </div>
     );
 };
