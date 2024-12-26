@@ -13,15 +13,18 @@ const CommonInput = ({ label, hint, inputType, icon} : InputProps) => {
         <div className={styles['input-container']}>
             <div className={styles['input-wrapper']}>
                 <label htmlFor={label}>{label}</label>
-                <input type={inputType} name={label} />
-            </div>
-            <div className={styles['icon-wrapper']}>
-                {icon}
+                <input type={inputType} name={label}/>
+                <div className={styles['icon-wrapper']}>
+                    {icon}
+                </div>
             </div>
 
-            <div>
-                {hint}
-            </div>
+
+            {hint ? (
+                <div className={styles['hint']}>
+                    <span>&#183;</span><p>{hint}</p>
+                </div>
+            ) : null }
         </div>
     );
 };
