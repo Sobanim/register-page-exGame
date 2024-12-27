@@ -1,0 +1,16 @@
+.multiLang-btn {
+  position: absolute;
+  top: 7%;
+  right: -10%;
+  border-radius: 50%;
+  background: #7E6969;
+
+  .selected-lang {
+    border: none;
+    background: none;
+
+    cursor: pointer;
+    padding: 8px;
+  }
+
+}

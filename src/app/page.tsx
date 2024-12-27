@@ -9,6 +9,7 @@ import Link from "next/link";
 import RegisterBtn from "@/app/components/registerBtn/registerBtn";
 import RegisterCheckbox from "@/app/components/registerCheckbox/registerCheckbox";
 import EmailInput from "@/app/components/emailInput/emailInput";
+import MultiLangBtn from "@/app/components/multiLangBtn/multiLangBtn";
 
 
 export default function RegisterPage() {
@@ -71,9 +72,12 @@ export default function RegisterPage() {
                         <Link href={"#"}>Contact Support</Link>
                     </div>
                 </div>
-            </div>
-        </div>
 
+                <MultiLangBtn />
+
+            </div>
+
+        </div>
     </div>
   );
 }
