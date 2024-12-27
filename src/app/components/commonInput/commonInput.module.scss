@@ -31,6 +31,14 @@
     font-family: 'Lato', sans-serif;
     font-size: 14px;
     padding: 0 10px;
+
+    @media (min-width: 1360px) {
+      height: 33px;
+    }
+
+    @media (min-width: 1900px) {
+      height: 46px;
+    }
   }
 
   .hint {
