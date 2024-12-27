@@ -16,7 +16,7 @@ export default function RegisterPage() {
   return (
     <div className={styles['container']}>
         <div className={styles['register-image']}>
-            <Image src="/register.jpg" fill sizes="50vw" style={{objectFit: 'contain'}} alt="Registration Image"/>
+            <Image src="/register-img/register.jpg" fill sizes="50vw" style={{objectFit: 'contain'}} alt="Registration Image"/>
         </div>
         <div className={styles['register-section']}>
             <div className={styles['heading']}>
