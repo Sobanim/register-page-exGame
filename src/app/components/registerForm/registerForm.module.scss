@@ -1,0 +1,17 @@
+.form {
+  margin-top: 75px;
+
+  @media (min-width: 1360px) {
+    margin-top: 55px;
+  }
+}
+
+.checkboxes {
+  display: grid;
+  margin-bottom: 25px;
+}
+
+.error-message {
+  color: #E80004;
+  font-size: 12px;
+}

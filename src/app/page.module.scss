@@ -44,14 +44,6 @@
   @media (min-width: 1900px) {
     padding: 0 165px 0 125px;
   }
-
-  form {
-    margin-top: 75px;
-
-    @media (min-width: 1360px) {
-      margin-top: 55px;
-    }
-  }
 }
 
 .heading {
@@ -78,11 +70,6 @@
   span {
     color: #E80004;
   }
-}
-
-.checkboxes {
-  display: grid;
-  margin-bottom: 25px;
 }
 
 .promo-support {
