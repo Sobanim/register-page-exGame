@@ -14,70 +14,68 @@ import MultiLangBtn from "@/app/components/multiLangBtn/multiLangBtn";
 
 export default function RegisterPage() {
   return (
-    <div className={styles['wrapper']}>
-        <div className={styles['container']}>
-            <div className={styles['register-image']}>
-                <Image src="/register.jpg" width={790} height={1020} alt="Registration Image"/>
+    <div className={styles['container']}>
+        <div className={styles['register-image']}>
+            <Image src="/register.jpg" fill sizes="50vw" style={{objectFit: 'cover'}} alt="Registration Image"/>
+        </div>
+        <div className={styles['register-section']}>
+            <div className={styles['heading']}>
+                <h1>Create an account<span>.</span></h1>
+                <p>Already have an account? <Link href="#">Sign in</Link></p>
             </div>
-            <div className={styles['register-section']}>
-                <div className={styles['heading']}>
-                    <h1>Create an account<span>.</span></h1>
-                    <p>Already have an account? <Link href="#">Sign in</Link></p>
+
+            <form>
+                <CommonInput
+                    label="User ID"
+                    inputType="text"
+                    icon={<UserIcon/>}/>
+                <CommonInput
+                    label="Password"
+                    inputType="password"
+                    hint="8 chatacters minimum"
+                    icon={<PasswordIcon/>}/>
+                <CommonInput
+                    label="Account Name"
+                    inputType="text"
+                    hint="Visible nickname for your profile"
+                    icon={<ProfileIcon/>}/>
+                <EmailInput />
+                <CommonInput
+                    label="Verification Code"
+                    inputType="text"
+                    icon={<EmailIcon/>}/>
+
+                <div className={styles['checkboxes']}>
+                    <RegisterCheckbox id={'terms'} required>
+                        <span>[Required] I read the <Link href="#">Terms of Uservises</Link> and I agree to the terms.</span>
+                    </RegisterCheckbox>
+
+                    <RegisterCheckbox id={'privacy'} required>
+                        <span>[Required] I read the <Link href="#">Privacy Policy</Link> and I agree to the terms.</span>
+                    </RegisterCheckbox>
+
+                    <RegisterCheckbox id={'promotional'}>
+                        <span>[Optional] I would like to receive promotional emails.</span>
+                    </RegisterCheckbox>
                 </div>
 
-                <form>
-                    <CommonInput
-                        label="User ID"
-                        inputType="text"
-                        icon={<UserIcon/>}/>
-                    <CommonInput
-                        label="Password"
-                        inputType="password"
-                        hint="8 chatacters minimum"
-                        icon={<PasswordIcon/>}/>
-                    <CommonInput
-                        label="Account Name"
-                        inputType="text"
-                        hint="Visible nickname for your profile"
-                        icon={<ProfileIcon/>}/>
-                    <EmailInput />
-                    <CommonInput
-                        label="Verification Code"
-                        inputType="text"
-                        icon={<EmailIcon/>}/>
+                <RegisterBtn type={"submit"} text={'Create Account'}/>
+            </form>
 
-                    <div className={styles['checkboxes']}>
-                        <RegisterCheckbox id={'terms'} required>
-                            <span>[Required] I read the <Link href="#">Terms of Uservises</Link> and I agree to the terms.</span>
-                        </RegisterCheckbox>
-
-                        <RegisterCheckbox id={'privacy'} required>
-                            <span>[Required] I read the <Link href="#">Privacy Policy</Link> and I agree to the terms.</span>
-                        </RegisterCheckbox>
-
-                        <RegisterCheckbox id={'promotional'}>
-                            <span>[Optional] I would like to receive promotional emails.</span>
-                        </RegisterCheckbox>
-                    </div>
-
-                    <RegisterBtn type={"submit"} text={'Create Account'}/>
-                </form>
-
-                <div className={styles['promo-support']}>
-                    <Link href={"#"} className={styles['code']}>
-                        <Image src='/support-icon.png' width={15} height={15} alt="Have a promo code?"/>
-                        Have a Promo Code?
-                    </Link>
-                    <div>
-                        <Link href={"#"}>Contact Support</Link>
-                    </div>
+            <div className={styles['promo-support']}>
+                <Link href={"#"} className={styles['code']}>
+                    <Image src='/support-icon.png' width={15} height={15} alt="Have a promo code?"/>
+                    Have a Promo Code?
+                </Link>
+                <div>
+                    <Link href={"#"}>Contact Support</Link>
                 </div>
-
-                <MultiLangBtn />
-
             </div>
+
+            <MultiLangBtn />
 
         </div>
+
     </div>
   );
 }

@@ -5,6 +5,11 @@
   border-radius: 50%;
   background: #7E6969;
 
+  @media (max-width: 1400px) {
+    right: -6%;
+    top: 3%;
+  }
+
   .selected-lang {
     border: none;
     background: none;

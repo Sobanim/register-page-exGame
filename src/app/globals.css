@@ -23,6 +23,16 @@ body {
   font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+
+  @media (min-width: 2650px) {
+    /*height: 100vh;*/
+  }
+
 }
 
 * {

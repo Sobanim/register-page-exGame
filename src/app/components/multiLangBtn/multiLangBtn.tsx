@@ -13,11 +13,6 @@ const MultiLangBtn = () => {
         setIsOpen(!isOpen);
     };
 
-    const selectLanguage = (language: Language) => {
-        setSelectedLanguage(language);
-        setIsOpen(false);
-    };
-
     const langFlags = {
         EN: '/eng.png',
     }
