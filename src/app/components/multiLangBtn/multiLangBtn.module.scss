@@ -10,6 +10,11 @@
     top: 3%;
   }
 
+  @media (max-width: 950px) {
+    top: 2%;
+    right: 4%;
+  }
+
   .selected-lang {
     border: none;
     background: none;
