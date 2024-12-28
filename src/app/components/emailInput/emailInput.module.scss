@@ -1,5 +1,6 @@
 .email-wrapper {
   position: relative;
+  margin-bottom: 0;
 }
 
 .email-btn {
@@ -19,4 +20,8 @@
   &:disabled {
     cursor: progress;
   }
+}
+
+.email-error {
+  margin-bottom: 20px;
 }

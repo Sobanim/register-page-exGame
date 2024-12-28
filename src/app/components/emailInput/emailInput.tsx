@@ -27,22 +27,26 @@ const EmailInput = ({error}: {error?: string}) => {
     }, [isRunning, time]);
 
     return (
-        <div className={styles['email-wrapper']}>
-            <CommonInput
-                htmlName='email'
-                label="Email"
-                inputType="email"
-                icon={<EmailIcon/>}/>
-            <button type="button"
-                    className={styles['email-btn']}
-                    onClick={handleSendVerificationCode}
-                    disabled={isRunning}>
-                {isRunning ? `Resend (${time.toString()}s)` : 'Send Verification Code'}
-                {time === 0 ? '' : ''}
-            </button>
+        <>
+            <div className={styles['email-wrapper']}>
+                <CommonInput
+                    htmlName='email'
+                    label="Email"
+                    inputType="email"
+                    icon={<EmailIcon/>}/>
+                <button type="button"
+                        className={styles['email-btn']}
+                        onClick={handleSendVerificationCode}
+                        disabled={isRunning}>
+                    {isRunning ? `Resend (${time.toString()}s)` : 'Send Verification Code'}
+                    {time === 0 ? '' : ''}
+                </button>
 
-            {error && <span className={styles['error']}>{error}</span>}
-        </div>
+            </div>
+            <div className={styles['email-error']}>
+                {error && <span className="error">{error}</span>}
+            </div>
+        </>
     );
 };
 

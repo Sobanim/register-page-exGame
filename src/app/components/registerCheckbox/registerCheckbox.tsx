@@ -10,12 +10,14 @@ type RegisterCheckboxProps = {
 
 const RegisterCheckbox = ({id, required, children, error}: RegisterCheckboxProps) => {
     return (
-        <div className={styles['checkbox-container']}>
-            <input type="checkbox" name={id} id={id} required={required} />
-            <label htmlFor={id}>{children}</label>
+        <>
+            <div className={styles['checkbox-container']}>
+                <input type="checkbox" name={id} id={id} required={required}/>
+                <label htmlFor={id}>{children}</label>
+            </div>
+            {error && <span className='error'>{error}</span>}
+        </>
 
-            {error && <span className={styles['error']}>{error}</span>}
-        </div>
     );
 };
 

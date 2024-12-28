@@ -21,13 +21,13 @@ const CommonInput = ({htmlName, label, hint, inputType, icon, error} : InputProp
                 </div>
             </div>
 
+            {error && <span className='error'>{error}</span>}
+
             {hint ? (
                 <div className={styles['hint']}>
                     <span>&#183;</span><p>{hint}</p>
                 </div>
             ) : null }
-
-            {error && <span className={styles['error']}>{error}</span>}
         </div>
     );
 };

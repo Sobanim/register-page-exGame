@@ -6,9 +6,9 @@ import { z } from 'zod';
 const schema = z.object({
     userId: z.string().min(1, 'User ID is required'),
     password: z.string().min(8, 'Password must be at least 8 characters'),
-    accountName: z.string().min(1, 'Account Name is required'),
+    accountName: z.string().min(3, 'Account Name is required'),
     email: z.string().email('Invalid email'),
-    verificCode: z.string().min(1, 'Verification code is required'),
+    verificCode: z.string().min(3, 'Verification code is required'),
     terms: z.literal(true, {
         errorMap: () => ({ message: 'You must accept Terms of Service' }),
     }),
@@ -42,7 +42,7 @@ export default async function validateForm(prevState: FormState, formData: FormD
     const result = schema.safeParse(rawData);
 
     if (!result.success) {
-        // Преобразуем ошибки Zod в нужный формат
+        // transform zod errors to a more user-friendly format
         const errors: { [key: string]: string[] } = {};
         result.error.issues.forEach((issue) => {
             const field = issue.path[0].toString();
@@ -59,7 +59,7 @@ export default async function validateForm(prevState: FormState, formData: FormD
     }
 
     try {
-        // Здесь ваша логика обработки валидных данных
+        // logic to handle form submission
         console.log('Validated data:', result.data);
 
         return {

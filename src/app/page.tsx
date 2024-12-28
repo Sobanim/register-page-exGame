@@ -60,7 +60,7 @@ export default function RegisterPage() {
                     hint="Visible nickname for your profile"
                     error={state?.errors?.accountName?.[0]}
                     icon={<ProfileIcon/>}/>
-                <EmailInput />
+                <EmailInput error={state?.errors?.email?.[0]} />
                 <CommonInput
                     htmlName='verificCode'
                     label="Verification Code"
