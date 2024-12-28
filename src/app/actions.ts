@@ -67,7 +67,7 @@ export default async function validateForm(prevState: FormState, formData: FormD
         };
     } catch (error) {
         return {
-            message: 'An error occurred during registration',
+            message: 'An error occurred during registration' + error,
         };
     }
 }
