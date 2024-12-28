@@ -4,7 +4,7 @@ import CommonInput from "@/app/components/commonInput/commonInput";
 import EmailIcon from "@/app/components/icons/emailIcon";
 import styles from './emailInput.module.scss'
 
-const EmailInput = () => {
+const EmailInput = ({error}: {error?: string}) => {
     const [time, setTime] = useState(60)
     const [isRunning, setIsRunning] = useState(false)
 
@@ -29,6 +29,7 @@ const EmailInput = () => {
     return (
         <div className={styles['email-wrapper']}>
             <CommonInput
+                htmlName='email'
                 label="Email"
                 inputType="email"
                 icon={<EmailIcon/>}/>
@@ -39,6 +40,8 @@ const EmailInput = () => {
                 {isRunning ? `Resend (${time.toString()}s)` : 'Send Verification Code'}
                 {time === 0 ? '' : ''}
             </button>
+
+            {error && <span className={styles['error']}>{error}</span>}
         </div>
     );
 };
